@@ -14,6 +14,9 @@
   tasks:
     - name: Install and configure Webserver
       when: ansible_facts['distribution'] == 'RedHat'
+      tags:
+        - install
+        - config
       block:
         - name: Install Packages
           ansible.builtin.package:
