@@ -2,7 +2,7 @@
 - name: Configure Webserver
   hosts: tag_solution_webserver_mmor0130
   become: true
-  
+
   tasks:
     - name: Install Apache
       ansible.builtin.dnf:
